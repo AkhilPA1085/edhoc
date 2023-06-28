@@ -284,15 +284,17 @@ Header Section
     padding: 10px 50px;
 }
 
-.nav-item{
-    transition: background-image 0.5s ease;
+.nav-item a:after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: var(--title-blue);
+    transition: width 0.5s ease;
 }
 
-.nav-item.active{
-    background-image: url('../icons/Vector\ 2.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
+.nav-item.active a:after{
+    width: 100%;
 }
 
 @media(max-width:992px){

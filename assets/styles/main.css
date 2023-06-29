@@ -5,6 +5,11 @@
     --btn-blue:#00AEEF;
     --background-blue:#F3F8FD;
     --card-text:#4B577A;
+    --card-green:#4FBC82;
+    --card-purple:#6371ED;
+    --card-violet:#7450A1;
+    --card-red:#F0513F;
+    --card-yellow:#FDB716;
 }
 
 body{
@@ -100,6 +105,34 @@ Buttons
     color: #fff;
     background-color: var(--btn-blue);
 }
+
+.green-btn{
+    border-radius: 10px;
+    border: 1px solid var(--card-green);
+    background-color: var(--card-green);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 10px 15px !important;
+    color: #fff!important;
+    padding-bottom: 0;
+    transition: background-color 0.5s ease; 
+    text-transform: uppercase !important;
+    letter-spacing: 2px;
+    font-size: 16px;
+    display: inline-flex;
+}
+
+.green-btn:hover{
+    color: #fff;
+    background-color: var(--card-green);
+}
+
+.green-btn:after{
+    content: url('../icons/arrow-forward\ 1.svg');
+    display: block;
+}
+
 
 
 @media(max-width:480px){
@@ -558,7 +591,7 @@ Featured News section
 
 .featured-news .card-footer .card-title{
     text-transform: capitalize;
-    color: #000;
+    color: var(--text-black);
 }
 
 .featured-news .card-footer a{
@@ -621,6 +654,7 @@ Featured News section
 Footer Top section
 ------------------------------------------------*/
 .footer-top{
+    padding: 50px 0px;
     background-color: var(--title-blue);
 }
 
@@ -666,7 +700,7 @@ footer .list .list-item{
 
 footer .list a{
     text-decoration: none;
-    color: #000;
+    color: var(--text-black);
     text-transform: capitalize;
     font-size: 18px;
 }
@@ -693,4 +727,303 @@ footer .list a{
         margin-top: 30px;
     }
     
+}
+
+/* ---------------------------------------------About Page------------------------------------------------*/
+
+/* ---------------------------------------------
+Statistics section
+------------------------------------------------*/
+.statistics .col-lg-4{
+    margin-bottom: 20px;
+}
+.statistics .card-title{
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.statistics .card-text{
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.statistics .branches .card-title {
+    color: var(--card-green);
+}
+
+.statistics .experts .card-title {
+    color: var(--card-purple);
+}
+
+.statistics .countries .card-title {
+    color: var(--card-violet);
+}
+
+.statistics .students .card-title {
+    color: var(--card-red);
+}
+
+.statistics .counselling .card-title {
+    color: var(--card-yellow);
+}
+
+.statistics .branches:hover .card-title,
+.statistics .experts:hover .card-title ,
+.statistics .countries:hover .card-title,
+.statistics .students:hover .card-title ,
+.statistics .counselling:hover .card-title {
+    color: inherit;
+}
+
+/* ---------------------------------------------
+Team section
+------------------------------------------------*/
+.team .grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 20px;
+    margin-top: 50px;
+}
+
+.team .grid-container .img-container{
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.team .grid-container img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.team .grid-container .card-body{
+    position: absolute;
+    top: auto;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin:0 20px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.team .grid-container .card{
+    background-color: transparent;
+}
+
+.team .grid-container .card:hover{
+    background-color: transparent;
+}
+
+.team .grid-container .card:hover .card-body{
+    color: var(--card-text);
+}
+
+@media(max-width:992px){
+    .team .grid-container{
+        grid-template-columns: repeat(2,auto);
+        grid-gap: 40px;
+    }
+
+    .team .grid-container .img-container{
+        position: relative;
+        height: 280px;
+        width: 100%;
+    }
+    
+    .team .grid-container img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .team .grid-container .card-body{
+        position: absolute;
+        top: auto;
+        bottom: -13%;
+        left: 0;
+        right: 0;
+        width: auto;
+        margin:0 20px;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+
+}
+
+@media(max-width:480px){
+    .team .grid-container{
+        grid-template-columns: repeat(1,auto);
+    }
+
+    .team .grid-container .grid-item{
+        margin-bottom: 150px;
+    }
+
+    
+    .team .grid-container .img-container{
+        position: relative;
+        height: 280px;
+        width: 100%;
+    }
+    
+    .team .grid-container img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .team .grid-container .card-body{
+        position: absolute;
+        top: auto;
+        bottom: -50%;
+        left: 0;
+        right: 0;
+        width: auto;
+        margin:0 20px;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+}
+
+
+
+/* ---------------------------------------------Scholorship Page------------------------------------------------*/
+
+/* ---------------------------------------------
+Scholorship section
+------------------------------------------------*/
+.scholorship-page{
+    padding: 150px 0px;
+}
+
+.scholorship-page select:focus{
+    outline: none;
+}
+
+.scholorship-page select,
+.scholorship-page select option{
+    cursor: pointer;
+}
+
+.scholorship-page .card{
+    margin-bottom: 30px;
+}
+
+.scholorship-page .card .card-body{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.scholorship-page .card .card-body .amount{
+    padding-right: 50px;
+}
+
+.scholorship-page .card .card-body .amount .card-title{
+    font-size: 64px;
+}
+
+.scholorship-page .card .card-body .date-country{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.scholorship-page .card .card-body .date-country .date{
+    padding-bottom: 50px;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.scholorship-page .card .card-body .date-country .country{
+    text-transform: capitalize;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.scholorship-page .card .card-body .description .card-text{
+    text-transform: capitalize;
+    font-size: 34px;
+}
+
+.scholorship-page .card .card-description{
+    color: var(--text-black);
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.scholorship-page .card:hover .card-description{
+    color: #fff;
+}
+
+
+@media(max-width:992px){
+    .scholorship-page{
+        padding: 100px 0px;
+    }
+
+    .scholorship-page .col-lg-8{
+        padding-top: 100px;
+    }
+    
+    .scholorship-page .card .card-body{
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .scholorship-page .card .card-body .amount{
+        padding-right: 0px;
+    }
+    
+    .scholorship-page .card .card-body .amount .card-title{
+        font-size: 64px;
+    }
+    
+    .scholorship-page .card .card-body .date-country{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .scholorship-page .card .card-body .date-country .date{
+        padding-bottom: 50px;
+        font-size: 21px;
+        font-weight: 400;
+    }
+    
+    .scholorship-page .card .card-body .date-country .country{
+        text-transform: capitalize;
+        font-size: 21px;
+        font-weight: 400;
+        padding-bottom: 50px;
+    }
+    
+    .scholorship-page .card .card-body .description .card-text{
+        text-transform: capitalize;
+        font-size: 34px;
+    }
+    
+    .scholorship-page .card .card-description{
+        color: var(--text-black);
+        font-size: 21px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+    
+    .scholorship-page .card:hover .card-description{
+        color: #fff;
+    } 
 }

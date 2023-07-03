@@ -1,4 +1,33 @@
+$(document).ready(function() {
+  var firstFilter = $('[data-filter]').first();
+  firstFilter.addClass("active");
+  var firstFilterData = firstFilter.data().filter;
+  
+  var filter = firstFilterData;
+  
+    $(document).on('change',"#scholorship-countries",function(){
+      filter = $(this).val();
+  
+      $("[data-filter]").removeClass("active");
+      $(this).addClass("active");
+      filterItems();
+    });
+  
+    filterItems();
+  
+    function filterItems() {
+      if (filter === firstFilterData || filter === "all countries") {
+        $(".filter-item").show();
+      } else {
+        $(".filter-item").hide();
+        $(".filter-item[data-filter='" + filter + "']").show();
+      }
+    }
+
+  });
+
 $(document).ready(function () {
+
   // navbar
   var prevScrollpos = $(window).scrollTop();
   $(window).on("scroll", function () {

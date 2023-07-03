@@ -967,6 +967,10 @@ Scholorship section
     color: #fff;
 }
 
+.filter-item {
+    display: none;
+}
+
 
 @media(max-width:992px){
     .scholorship-page{

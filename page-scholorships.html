@@ -111,26 +111,26 @@
     <section class="scholorship-page" id="scholorship-page">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-4">
+          <div class="col-lg-4">
             <div class="section-sub-title">scholorships</div>
             <h1 class="section-title">Lets find out the best fit</h1>
 
-            <select name="countries" id="countries" class="outlined-btn">
-              <option value="all countries" class="outlined-btn">
+            <select name="countries" id="scholorship-countries" class="outlined-btn">
+              <option value="all countries" class="outlined-btn" data-filter="all countries">
                 all countries
               </option>
-              <option value="australia" class="outlined-btn">australia</option>
-              <option value="uk" class="outlined-btn">uk</option>
-              <option value="canada" class="outlined-btn">canada</option>
-              <option value="germany" class="outlined-btn">germany</option>
-              <option value="united states" class="outlined-btn">
+              <option value="australia" class="outlined-btn" data-filter="australia">australia</option>
+              <option value="uk" class="outlined-btn" data-filter="uk">uk</option>
+              <option value="canada" class="outlined-btn" data-filter="canada">canada</option>
+              <option value="germany" class="outlined-btn" data-filter="germany">germany</option>
+              <option value="united states" class="outlined-btn" data-filter="united states">
                 united states
               </option>
             </select>
           </div>
 
-          <div class="col-lg-8 col-md-8">
-            <div class="card">
+          <div class="col-lg-8 filter-items">
+            <div class="card filter-item" data-filter="australia">
               <div class="card-body">
                 <div class="amount">
                   <div class="card-title">$50000</div>
@@ -151,7 +151,7 @@
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card filter-item" data-filter="australia">
               <div class="card-body">
                 <div class="amount">
                   <div class="card-title">$50000</div>
@@ -162,6 +162,90 @@
                 </div>
                 <div class="description">
                   <div class="card-text">australia Scholarship</div>
+                  <div class="card-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempora tenetur aspernatur cupiditate deserunt quasi ad.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempora tenetur aspernatur cupiditate deserunt quasi ad.
+                  </div>
+                  <a href="#" class="green-btn">check eligibility </a>
+                </div>
+              </div>
+            </div>
+            <div class="card filter-item" data-filter="uk">
+              <div class="card-body">
+                <div class="amount">
+                  <div class="card-title">$50000</div>
+                  <div class="date-country">
+                    <div class="date">Last Date:</div>
+                    <div class="country">uk</div>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="card-text">uk Scholarship</div>
+                  <div class="card-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempora tenetur aspernatur cupiditate deserunt quasi ad.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempora tenetur aspernatur cupiditate deserunt quasi ad.
+                  </div>
+                  <a href="#" class="green-btn">check eligibility </a>
+                </div>
+              </div>
+            </div>
+            <div class="card filter-item" data-filter="uk">
+              <div class="card-body">
+                <div class="amount">
+                  <div class="card-title">$50000</div>
+                  <div class="date-country">
+                    <div class="date">Last Date:</div>
+                    <div class="country">uk</div>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="card-text">uk Scholarship</div>
+                  <div class="card-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempora tenetur aspernatur cupiditate deserunt quasi ad.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempora tenetur aspernatur cupiditate deserunt quasi ad.
+                  </div>
+                  <a href="#" class="green-btn">check eligibility </a>
+                </div>
+              </div>
+            </div>
+            <div class="card filter-item" data-filter="canada">
+              <div class="card-body">
+                <div class="amount">
+                  <div class="card-title">$50000</div>
+                  <div class="date-country">
+                    <div class="date">Last Date:</div>
+                    <div class="country">canada</div>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="card-text">canada Scholarship</div>
+                  <div class="card-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempora tenetur aspernatur cupiditate deserunt quasi ad.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempora tenetur aspernatur cupiditate deserunt quasi ad.
+                  </div>
+                  <a href="#" class="green-btn">check eligibility </a>
+                </div>
+              </div>
+            </div>
+            <div class="card filter-item" data-filter="canada">
+              <div class="card-body">
+                <div class="amount">
+                  <div class="card-title">$50000</div>
+                  <div class="date-country">
+                    <div class="date">Last Date:</div>
+                    <div class="country">canada</div>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="card-text">canada Scholarship</div>
                   <div class="card-description">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Tempora tenetur aspernatur cupiditate deserunt quasi ad.
@@ -182,12 +266,12 @@
     <section class="footer-top" id="footer-top">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-8">
+          <div class="col-lg-8">
             <h1 class="section-title">featured accross</h1>
             <div class="section-description">Find your dream course abroad</div>
             <a href="#" class="outlined-btn">+talk now</a>
           </div>
-          <div class="col-lg-4 col-md-4">
+          <div class="col-lg-4">
             <img
               src="assets/icons/Happy student-bro 1.svg"
               alt=""

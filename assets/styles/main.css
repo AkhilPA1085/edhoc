@@ -10,6 +10,7 @@
     --card-violet:#7450A1;
     --card-red:#F0513F;
     --card-yellow:#FDB716;
+    --card-date:#263238;
 }
 
 body{
@@ -61,6 +62,11 @@ Titles
    text-transform: capitalize;
    color: var(--title-blue); 
    font-family: 'Nunito', sans-serif;
+}
+
+.section-title span{
+    color: var(--btn-blue);
+    margin-right: 5px;
 }
 
 .section-sub-title{
@@ -131,6 +137,14 @@ Buttons
 .green-btn:after{
     content: url('../icons/arrow-forward\ 1.svg');
     display: block;
+    height: 20px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
 }
 
 
@@ -317,7 +331,7 @@ Header Section
     padding: 10px 50px;
 }
 
-.nav-item a:after{
+.navbar-nav .nav-item:after{
     content: '';
     display: block;
     height: 2px;
@@ -326,7 +340,7 @@ Header Section
     transition: width 0.5s ease;
 }
 
-.nav-item.active a:after{
+.nav-item.active:after{
     width: 100%;
 }
 
@@ -967,11 +981,6 @@ Scholorship section
     color: #fff;
 }
 
-.filter-item {
-    display: none;
-}
-
-
 @media(max-width:992px){
     .scholorship-page{
         padding: 100px 0px;
@@ -1030,4 +1039,845 @@ Scholorship section
     .scholorship-page .card:hover .card-description{
         color: #fff;
     } 
+}
+
+
+/* ---------------------------------------------Course Finder Page------------------------------------------------*/
+.step{
+    padding-top: 100px;
+}
+
+.course-finder .step {
+    display: none;
+}
+
+.course-finder .step.active {
+    display: block;
+}
+
+.course-finder .filter-items{
+    padding-top: 100px;
+}
+
+
+
+
+/* ---------------------------------------------
+Course finder section
+------------------------------------------------*/
+.course-finder .section-title{
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.course-finder .countries-step{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.course-finder .countries-step input[type="checkbox"] {
+    display: none;
+}
+
+.course-finder .countries-step label {
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.course-finder .countries-step label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid var(--btn-blue);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+.course-finder .countries-step label img {
+    height: 100%;
+    width: 150px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+}
+
+.course-finder .countries-step :checked + label {
+    border-color: #ddd;
+}
+
+.course-finder .countries-step :checked + label:before {
+    content: "✓";
+    background-color: var(--btn-blue);
+    transform: scale(1);
+}
+
+.course-finder .countries-step :checked + label img,
+.course-finder .countries-step :checked + label .name {
+    transform: scale(0.9);
+    /* box-shadow: 0 0 5px #333; */
+    z-index: -1;
+}
+
+.course-finder .step .name{
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--title-blue);
+    text-align: center;
+}
+
+/*-----------------------------------------------------------
+Ug-pg section 
+--------------------------------------------------------------*/
+.ug-pg-step{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ug-pg-step .name{
+    font-size: 21px;
+}
+
+.course-finder .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-finder .buttons a{
+    margin-right: 20px;
+}
+
+/*-----------------------------------------------------------
+Sector section 
+--------------------------------------------------------------*/
+.sector-step{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sector-step .name{
+    font-size: 21px;
+}
+
+/*-----------------------------------------------------------
+Score-step section 
+--------------------------------------------------------------*/
+.score-step{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-step input[type="text"]{
+    border: none;
+    border-bottom: 1px solid var(--btn-blue);
+    background-color: transparent;
+}
+
+.score-step input[type="text"]:focus{
+    outline: none;
+    border-bottom: 1px solid var(--btn-blue);
+}
+
+/*-----------------------------------------------------------
+English Test-step section 
+--------------------------------------------------------------*/
+.english-score-step{
+    display: flex;
+    justify-content: center;
+}
+
+.english-score-step input[type="text"]{
+    border: none;
+    border-bottom: 1px solid var(--btn-blue);
+    background-color: transparent;
+}
+
+.english-score-step input[type="text"]:focus{
+    outline: none;
+    border-bottom: 1px solid var(--btn-blue);
+}
+
+
+/*-----------------------------------------------------------
+Course step section 
+--------------------------------------------------------------*/
+.course-step {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.course-finder .course-step input[type="checkbox"] {
+    display: none;
+}
+
+.course-finder .course-step label {
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.course-finder .course-step label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid var(--btn-blue);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+.course-finder .course-step label img {
+    height: 100%;
+    width: 150px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+}
+
+.course-finder .course-step :checked + label {
+    border-color: #ddd;
+}
+
+.course-finder .course-step :checked + label:before {
+    content: "✓";
+    background-color: var(--btn-blue);
+    transform: scale(1);
+}
+
+.course-finder .course-step :checked + label img,
+.course-finder .course-step :checked + label .name {
+    transform: scale(0.9);
+    /* box-shadow: 0 0 5px #333; */
+    z-index: -1;
+}
+
+.course-finder .course-step .name{
+    text-transform: uppercase !important;
+    font-weight: 700;
+    color: var(--title-blue);
+    text-align: center;
+}
+
+/* ---------------------------------------country-page---------------------------------------------------------- */
+
+/*-----------------------------------------------------------
+country-banner section 
+--------------------------------------------------------------*/
+
+.country-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    padding-top: 200px;
+}
+
+.country-banner .section-title{
+    margin: 20px 0px;
+    color: #fff;
+}
+
+@media(max-width:992px){
+    .country-banner{
+        height: auto;
+    }
+}
+
+
+/*-----------------------------------------------------------
+fixed-inner-bar section 
+--------------------------------------------------------------*/
+.fixed-inner-bar{
+    padding: 0;
+    background-color: #fff;
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 10px 0 10px 0 #ccc;
+}
+
+.fixed-inner-bar .navbar-nav{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fixed-inner-bar .navbar-nav a{
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+@media(max-width:992px){
+    .fixed-inner-bar ul{
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .fixed-inner-bar ul li{
+        margin-right: 20px;
+    }
+}
+
+
+/*-----------------------------------------------------------
+content-slider section 
+--------------------------------------------------------------*/
+.content-slider{
+    padding-top: 0px;
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+.slider-content-items{
+    background-color: var(--background-ash);
+    padding: 40px 0px;
+}
+
+.slider-content-items .section-title{
+    font-size: 48px;
+    display: inline-block;
+}
+
+.slider-content-items .section-title span{
+    color: var(--btn-blue);
+}
+
+.slider-content-item .col-lg-4 {
+    margin-top: 20px;
+}
+
+.slider-content-item .card .card-body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.slider-content-item .card .card-body img{
+    margin-right: 20px;
+}
+
+.slider-content-item .card .card-body .card-text{
+    font-weight: normal;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.slider-content-item .card .card-body .card-title{
+    text-transform: capitalize;
+}
+
+@media(max-width:992px){
+    .content-slider .list{
+        justify-content: center;
+    }
+}
+
+/*-----------------------------------------------------------
+About country section 
+--------------------------------------------------------------*/
+.about-country{
+    background-color: #fff;
+    padding-top: 0;
+}
+
+.about-country .content{
+    display: flex;
+}
+
+.about-country .content .title-col{
+    margin-right: 30px;
+}
+
+.about-country .content .title-col .section-title{
+    font-size: 48px;
+}
+
+.about-country .content .title-col .section-title span{
+    color: var(--btn-blue);
+}
+
+.about-country .content .desc-col .description{
+    color: var(--text-black);
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.about-country .content .desc-col a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media(max-width:992px){
+    .about-country .content{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*-----------------------------------------------------------
+Country updates section 
+--------------------------------------------------------------*/
+.country-updates .section-title{
+    font-size: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+}
+
+.country-updates .section-title span{
+    color: var(--btn-blue);
+}
+
+.country-updates .img-container{
+    position: relative;
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.country-updates .card-body{
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin:0 20px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.country-updates .card{
+    background-color: transparent;
+    padding-bottom: 120px;
+}
+
+.country-updates .card:hover{
+    background-color: transparent;
+}
+
+.country-updates .card:hover .card-body{
+    color: var(--card-text);
+}
+
+.country-updates .card a{
+    color: var(--btn-blue);
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.country-updates .card:hover a{
+    color: var(--btn-blue);
+}
+
+.country-updates .card .card-text{
+    max-height: 3em; /* Set the maximum height to three lines */
+  overflow: hidden; /* Hide any overflowed content */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit the text to three lines */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.country-updates .card .date{
+    color: var(--card-date);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+}
+
+.country-updatesSwiper .swiper-wrapper{
+    padding-top: 100px;
+}
+
+.country-updatesSwiper .swiper-button-next,
+.country-updatesSwiper .swiper-button-prev{
+    border: 1px solid var(--btn-blue);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    top: 23px;
+}
+
+.country-updatesSwiper .swiper-button-prev{
+    left: auto;
+    right: 60px;
+}
+
+@media(max-width:992px){
+    .country-updates .section-title{
+        position: relative;
+    }
+}
+
+/*-----------------------------------------------------------
+Top-universities section 
+--------------------------------------------------------------*/
+.top-universities{
+    background-color: #fff;
+}
+
+.top-universities .section-title{
+    font-size: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.top-universities .section-title span{
+    color: var(--btn-blue);
+}
+
+.top-universities .col-lg-3{
+    margin-top: 20px;
+}
+
+.top-universities .img-container{
+    position: relative;
+    height: 90px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-universities .img-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.top-universities .button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/*---------------------------------------------- 
+Admission-requirements
+------------------------------------------------*/
+.admission-requirements{
+    padding-bottom: 50px;
+}
+
+.admission-requirements .section-title{
+    font-size: 48px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.admission-requirements .content{
+    margin-top: 50px;
+}
+
+.admission-requirements .content .title{
+    color: var(--card-text);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.admission-requirements .button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+/*---------------------------------------------- 
+Earnings-expenses
+------------------------------------------------*/
+.earnings-expenses{
+    background-color: #fff;
+}
+
+.earnings-expenses .section-title{
+    font-size: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+#chartdiv {
+    width: 100%;
+    height: auto;
+}
+
+.earnings-expenses .col-title{
+    color: var(--card-date);;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+
+.earnings-expenses .col-lg-6{
+    margin-bottom: 30px;
+}
+
+.earnings-expenses .box{
+    display: flex;
+    align-items: center;
+}
+
+.earnings-expenses .box img{
+    margin-right: 20px;
+}
+
+.earnings-expenses .box .box-title{
+    color: var(--card-text);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.earnings-expenses .box .box-amount{
+    color: var(--card-text);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.earnings-expenses .button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* ---------------------------------------------
+Seats banner section
+------------------------------------------------*/
+.seats-banner{
+    padding: 0px;
+    padding-top: 50px;
+    background-color: var(--title-blue);
+}
+
+.seats-banner .section-title{
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------------------
+Country Scholorships section
+------------------------------------------------*/
+
+.country-scholorships .section-title{
+    font-size: 48px;
+}
+
+.country-scholorships .card-col{
+    margin-bottom: 30px;
+}
+
+.country-scholorships .card .card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.country-scholorships .card .card-title{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 36px;
+}
+
+.card .white-arrow{
+    display: none;
+}
+
+.card:hover .white-arrow{
+    display: block;
+    cursor: pointer;
+}
+
+.card .blue-arrow{
+    display: block;
+    cursor: pointer;
+}
+
+.card:hover .blue-arrow{
+    display: none;
+}
+
+@media(max-width:992px){
+    .country-scholorships .card-col{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+}
+
+/* ---------------------------------------------
+Best Sectors section
+------------------------------------------------*/
+.best-sectors{
+    background-color: #fff;
+}
+
+.best-sectors .section-title{
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.best-sectors .sector-list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.best-sectors .sector-list li{
+    margin-right: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.best-sectors .sector-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.best-sectors .sector-box .sector-title{
+    color: var(--card-text);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 36px;
+    margin-top: 20px;
+}
+
+/* ---------------------------------------------
+MNCs section
+------------------------------------------------*/
+.mnc-section .section-title{
+    text-transform: uppercase;
+    font-size: 48px;
+}
+
+.mnc-section .section-title small{
+    text-transform: lowercase;
+}
+
+/* ---------------------------------------------
+FAQs section
+------------------------------------------------*/
+.FAQs .section-title{
+    font-size: 48px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.accordion {
+    color: var(--card-text);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 36px;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion.active, .accordion.accordion:hover {
+    background-color: #fff; 
+}
+
+.accordion span{
+    font-size: 28px;
+    color: var(--btn-blue);
+    font-weight: 700;
+}
+
+.accordion.active{
+    margin-bottom: 0;
+}
+
+.accordion .remove{
+    display: none;
+}
+
+.accordion.active .remove{
+    display: block;
+}
+
+.accordion .add{
+    display: block;
+}
+
+.accordion.active .add{
+    display: none;
+}
+
+.panel {
+    color: var(--text-black);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 20px;
 }
